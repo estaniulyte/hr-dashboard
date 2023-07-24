@@ -3,6 +3,7 @@ export interface NavItem {
   title: string;
   href: string;
   icon: string;
+  active?: boolean;
 };
 
 export interface NavItemGroup {
