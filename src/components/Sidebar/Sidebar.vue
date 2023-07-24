@@ -8,18 +8,15 @@ import SvgIcon from '../SvgIcon.vue'
     <div class="title-container">
       <h1 class="title">WeHR</h1>
     </div>
-    <!-- {{ sidebar[0] }} -->
-    <ul class="nav" v-for="item in sidebar">
-      <li>
-        <h3 class="nav-title">{{ item.title }}</h3>
-      </li>
+    <nav class="nav" v-for="item in sidebar">
+      <h3 class="nav-title">{{ item.title }}</h3>
       <ul class="nav-link" v-for="link in item.items">
-        <li :class="{ active: link.active }">
+        <a :class="{ active: link.active }">
           <SvgIcon :path="link.icon"> </SvgIcon>
           <h4>{{ link.title }}</h4>
-        </li>
+        </a>
       </ul>
-    </ul>
+    </nav>
   </div>
 </template>
 
@@ -80,25 +77,26 @@ import SvgIcon from '../SvgIcon.vue'
   color: var(--secondary-subtitle-color);
 }
 
-.nav-link li {
+.nav-link a {
   display: flex;
   align-items: center;
   text-align: center;
   gap: 24px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   background-color: #f9e2e2;
   color: var(--main-color-lighten);
   cursor: pointer;
 }
 
-.nav-link:hover svg{
+.nav-link:hover svg {
   color: var(--main-color-lighten);
   cursor: pointer;
 }
 
-.active, .active svg {
+.active,
+.active svg {
   color: var(--main-color);
 }
 
@@ -113,7 +111,7 @@ import SvgIcon from '../SvgIcon.vue'
     display: flex;
     /* //visibility: hidden; */
   }
-  .nav-link li h4 {
+  .nav-link a h4 {
     display: none;
   }
   .title {
@@ -126,14 +124,13 @@ import SvgIcon from '../SvgIcon.vue'
     font-size: 10px;
   }
 
-  .nav-link{
+  .nav-link {
     justify-content: center;
   }
 }
 
 @media (min-width: 1024px) {
- 
-  .nav-link li h4{
+  .nav-link a h4 {
     display: inline;
   }
 
@@ -142,13 +139,12 @@ import SvgIcon from '../SvgIcon.vue'
     padding-left: 30px;
   }
 
-  .nav-link{
+  .nav-link {
     justify-content: left;
   }
 
   .title {
     font-size: 36px;
   }
-
 }
 </style>
