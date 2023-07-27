@@ -10,3 +10,24 @@ export interface NavItemGroup {
   title: string;
   items: NavItem[];
 }
+
+export interface IconButton {
+  icon: string;
+  title: string;
+  href: string;
+  tooltip?: string;
+}
+
+export interface HeaderConfig {
+  actionButtons: IconButton[];
+  userMenu: {
+    image: string;
+    fullName: string;
+  }
+}
+
+export interface StatCard {
+  heading: string;
+  subheading: string;
+  number: number;
+}
