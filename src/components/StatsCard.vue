@@ -12,7 +12,7 @@ defineProps<{
   <div class="card">
     <CardTitle :title="title" />
     <span class="number"> {{ number }}</span>
-    <p class="subtitle">{{ subtitle }}</p>
+    <a class="subtitle">{{ subtitle }}</a>
   </div>
 </template>
 
@@ -25,17 +25,31 @@ defineProps<{
   gap: 16px;
   flex-direction: column;
   border-radius: 10px;
-  background: #fdebf9;
+  cursor: pointer;
+}
+
+.card:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .number {
   color: var(--tertiary-colo);
   font-feature-settings: 'salt' on, 'liga' off;
-  font-family: Poppins;
-  font-size: 36px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28px; /* 77.778% */
+  line-height: 28px;
+  font-family: var(--main-font);
+}
+
+.subtitle {
+  color: #ee61cf;
+  font-feature-settings: 'salt' on, 'liga' off;
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  white-space: nowrap;
 }
 .card:first-of-type {
   background-color: #ffefe7;
@@ -59,5 +73,23 @@ defineProps<{
 
 .card:nth-child(3) .subtitle {
   color: #ee61cf;
+}
+
+@media (min-width: 390px) {
+  .number {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1197px) {
+  .number {
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
 }
 </style>
