@@ -12,8 +12,6 @@ import { searchIconPath } from '@/config/iconPaths'
 
 <style scoped>
 form {
-  width: 343px;
-  height: 44px;
   position: relative;
   display: flex;
   background-color: var(--background-color);
@@ -46,5 +44,36 @@ input[type='search']::placeholder {
   right: 0;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+@media (min-width: 390px) {
+  form {
+    width: 24px;
+    border: none;
+  }
+  input[type='search'],
+  .icon {
+    display: none;
+  }
+}
+
+@media (min-width: 744px) {
+  form {
+    width: 245px;
+    height: 36px;
+    border: var(--border-style);
+  }
+
+  input[type='search'],
+  .icon {
+    display: flex;
+  }
+}
+
+@media (min-width: 1197px) {
+  form {
+    width: 343px;
+    height: 44px;
+  }
 }
 </style>
