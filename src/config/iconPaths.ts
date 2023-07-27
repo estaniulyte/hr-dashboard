@@ -129,7 +129,7 @@ export const supportIconPath = `
 
 export const arrowDownIconPath = `
   <g id="Frame 10">
-    <path id="Vector 1" d="M6.5 10L12.5 15L18.5 10" stroke="#737898" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="Vector 1" d="M6.5 10L12.5 15L18.5 10" stroke="#737898" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 `
 
