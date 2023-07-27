@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="container">
+  <section class="container">
     <StatsCard
       v-for="card in cards"
       :key="card.heading"
@@ -17,7 +17,7 @@ defineProps<{
       :subtitle="card.subheading"
       :number="card.number"
     />
-  </div>
+  </section>
 </template>
 
 <style scoped>
