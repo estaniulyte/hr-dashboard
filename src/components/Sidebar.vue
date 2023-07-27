@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { sidebar } from '@/config/sidebar'
-import SvgIcon from '../SvgIcon.vue'
+import SvgIcon from '@/components/SvgIcon.vue'
 </script>
 
 <template>
@@ -100,13 +100,13 @@ import SvgIcon from '../SvgIcon.vue'
   color: var(--main-color);
 }
 
-@media (min-width: 320px) {
+@media (min-width: 390px) {
   .sidebar {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 744px) {
   .sidebar {
     display: flex;
     /* //visibility: hidden; */
@@ -129,7 +129,7 @@ import SvgIcon from '../SvgIcon.vue'
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1197px) {
   .nav-link a h4 {
     display: inline;
   }
