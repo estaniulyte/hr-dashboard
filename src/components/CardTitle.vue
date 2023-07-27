@@ -12,6 +12,7 @@ defineProps<{
 .title {
   align-self: stretch;
   color: var(--tertiary-color);
+  font-family: var(--main-font);
   font-feature-settings: 'salt' on, 'liga' off;
   font-style: normal;
   font-weight: 500;
