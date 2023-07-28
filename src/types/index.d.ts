@@ -31,3 +31,19 @@ export interface StatCard {
   subheading: string;
   number: number;
 }
+
+export interface Device {
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  discountPercentage: float;
+  rating: float;
+  stock: number;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: Array<string>;
+}
+
+}
