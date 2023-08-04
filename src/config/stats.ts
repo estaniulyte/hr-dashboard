@@ -1,4 +1,4 @@
-import { type StatCard } from '@/types/index.d'
+import { type StatCard } from '@/types/types'
 
 export const statsCards: StatCard[] = [
   {

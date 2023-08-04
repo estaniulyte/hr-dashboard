@@ -37,8 +37,8 @@ export interface Device {
   title: string;
   description: string;
   price: number;
-  discountPercentage: float;
-  rating: float;
+  discountPercentage: number;
+  rating: number;
   stock: number;
   brand: string;
   category: string;
@@ -46,4 +46,9 @@ export interface Device {
   images: Array<string>;
 }
 
+export interface Products {
+  products: Array<Device>;
+  total: number;
+  skip: number;
+  // limit: number;
 }

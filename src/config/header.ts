@@ -1,4 +1,4 @@
-import { type HeaderConfig } from '@/types/index.d'
+import { type HeaderConfig } from '@/types/types'
 
 import {
   notificationsIconPath,

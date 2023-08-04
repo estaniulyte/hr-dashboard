@@ -1,4 +1,4 @@
-import { type NavItemGroup } from '@/types/index.d'
+import { type NavItemGroup } from '@/types/types'
 
 import {
   dashboardIconPath,
