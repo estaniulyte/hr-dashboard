@@ -14,9 +14,7 @@ export const chatIconPath = `
 `
 
 export const dashboardIconPath = `
-  <rect width="24" height="24" fill="#DEDEDE" />
-  <g id="Dashboard Desktop" clip-path="url(#clip0_149_462)">
-    <rect width="1440" height="900" transform="translate(-30 -175)" fill="#FAFAFA" />
+  <g id="Dashboard Desktop">
     <g id="Sidebar">
       <g id="Frame 87">
         <g id="Frame 1">
@@ -30,11 +28,6 @@ export const dashboardIconPath = `
       </g>
     </g>
   </g>
-  <defs>
-    <clipPath id="clip0_149_462">
-      <rect width="1440" height="900" fill="white" transform="translate(-30 -175)" />
-    </clipPath>
-  </defs>
 `
 
 export const departmentIconPath = `
