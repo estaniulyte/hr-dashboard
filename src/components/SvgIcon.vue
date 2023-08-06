@@ -1,11 +1,13 @@
 <script setup lang="ts">
 defineProps<{
-  path: string
+  path: string,
+  size?: string,
 }>()
 </script>
 
 <template>
   <svg
+    :style="{ '--icon-size': size }"
     width="24"
     height="24"
     viewBox="0 0 24 24"
