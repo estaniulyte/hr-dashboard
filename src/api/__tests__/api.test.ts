@@ -14,7 +14,7 @@ jest.mock('axios', () => ({
 
 describe('fetchHelper', () => {
   it('should fetch data successfully', async () => {
-    const url = 'https://dummyjson.com/products/category/smartphones'
+    const url = import.meta.env.VITE_API_URL
     const data = await fetchHelper<string>(url)
     expect(data).toEqual('test data')
   })
@@ -26,7 +26,7 @@ jest.mock('axios', () => ({
 
 describe('fetchHelper', () => {
   it('should throw an error for API error', async () => {
-    const url = 'https://dummyjson.com/products/category/smartphones'
+    const url = import.meta.env.VITE_API_URL
     try {
       await fetchHelper<string>(url)
       expect(true).toBe(false)
