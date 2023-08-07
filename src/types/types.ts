@@ -49,7 +49,7 @@ export interface Products {
   products: Array<Device>
   total: number
   skip: number
-  // limit: number;
+  limit: number;
 }
 
 export interface Post {
@@ -61,4 +61,14 @@ export interface Post {
 export interface Activity {
   recentPost: Post
   activityCount: number
+}
+
+export interface Event {
+  title: string
+  date: string
+}
+
+export interface Schedule {
+  priority: Event[]
+  other: Event[]
 }
