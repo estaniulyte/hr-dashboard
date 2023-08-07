@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { type StatCard } from '@/types/index'
+import { type StatCard } from '@/types/types'
 
-import StatsCard from '@/components/StatsCard.vue'
+import StatsCard from '@/components/cards/StatsCard.vue'
 
 defineProps<{
   cards: Array<StatCard>
