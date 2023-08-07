@@ -32,8 +32,6 @@ import SvgIcon from '@/components/SvgIcon.vue'
   height: 100%;
   background-color: #fafafa;
   flex-direction: column;
-
-  /* align-items: center; */
   gap: 39px;
   flex-shrink: 0;
 }
@@ -55,12 +53,11 @@ import SvgIcon from '@/components/SvgIcon.vue'
 .nav {
   display: flex;
   flex-direction: column;
-  /* padding: 0px 30px; */
 }
 
 .nav-title {
   color: var(--secondary-subtitle-color);
-  font-family: Roboto;
+  font-family: var(--secondary-font);
   font-size: 12px;
   text-transform: uppercase;
   opacity: 0.5;
@@ -109,7 +106,6 @@ import SvgIcon from '@/components/SvgIcon.vue'
 @media (min-width: 744px) {
   .sidebar {
     display: flex;
-    /* //visibility: hidden; */
   }
   .nav-link a h4 {
     display: none;
