@@ -58,7 +58,6 @@ defineProps<{
 .action {
   display: flex;
   width: 100%;
-  justify-content: space-between;
 }
 
 .post-time {
@@ -146,6 +145,7 @@ defineProps<{
 
   .action {
     flex-direction: row;
+    justify-content: space-between;
     padding: 0 24px 26px 24px;
   }
 }
