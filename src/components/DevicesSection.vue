@@ -23,15 +23,26 @@ const sortedDevices = computed(() => {
 
   const clonedDevices = [...props.devices]
 
-  if (sortKey.value === 'rating') {
-    return clonedDevices.sort((a, b) => b[sortKey.value] - a[sortKey.value])
-  } else if (sortKey.value === 'price') {
-    return clonedDevices.sort((a, b) => a[sortKey.value] - b[sortKey.value])
-  } else if (sortKey.value === 'id') {
-    return clonedDevices.sort((a, b) => a[sortKey.value] - b[sortKey.value])
-  } else {
-    return clonedDevices.sort((a, b) => a[sortKey.value].localeCompare(b[sortKey.value]))
-  }
+  clonedDevices.sort((a: Device, b: Device): any => {
+    const currValue = a[sortKey.value]
+    const nextValue = b[sortKey.value]
+    if (typeof currValue === 'string' && typeof nextValue === 'string') {
+      const nameA = (currValue as string).toUpperCase()
+      const nameB = (nextValue as string).toUpperCase()
+      if (nameA < nameB) {
+        return -1
+      }
+      if (nameA > nameB) {
+        return 1
+      }
+
+      return 0
+    } else if (typeof currValue === 'number' && typeof nextValue === 'number') {
+      return (currValue as number) - (nextValue as number)
+    }
+  })
+
+  return clonedDevices
 })
 
 const handleSortChange = (sortOption: keyof Device) => {
