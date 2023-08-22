@@ -21,6 +21,7 @@ import MainPage from '@/pages/MainPage.vue'
 <style scoped>
 .app {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -30,12 +31,12 @@ import MainPage from '@/pages/MainPage.vue'
 
 .main-container {
   display: flex;
-  flex: 1;
-  overflow-x: hidden;
 }
 
 .main-content {
-  flex: 1;
+  width: calc(100% - var(--sidebar-width));
+  max-width: calc(100% - var(--sidebar-width));
   margin-left: var(--sidebar-width);
 }
+
 </style>

@@ -51,6 +51,8 @@ onMounted(async () => {
 
 @media (min-width: 390px) {
   .content {
+    width: 100%;
+    max-width: 1fr;
     display: flex;
     flex-direction: column;
     gap: 20px;
