@@ -24,6 +24,7 @@ defineProps<{
   height: 42px;
   width: 42px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .name {
   color: var(--tertiary-color);
