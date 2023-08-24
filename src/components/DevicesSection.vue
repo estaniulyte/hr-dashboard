@@ -3,6 +3,8 @@ import { type Device } from '@/types/types'
 import SectionCardItem from '@/components/cards/SectionCardItem.vue'
 import DeviceCard from '@/components/cards/DeviceCard.vue'
 
+import { sortByKey } from '@/utils/sort'
+
 import { arrowDownIconPath } from '@/config/iconPaths'
 
 import SvgIcon from '@/components/SvgIcon.vue'
@@ -23,26 +25,9 @@ const sortedDevices = computed(() => {
 
   const clonedDevices = [...props.devices]
 
-  clonedDevices.sort((a: Device, b: Device): any => {
-    const currValue = a[sortKey.value]
-    const nextValue = b[sortKey.value]
-    if (typeof currValue === 'string' && typeof nextValue === 'string') {
-      const nameA = (currValue as string).toUpperCase()
-      const nameB = (nextValue as string).toUpperCase()
-      if (nameA < nameB) {
-        return -1
-      }
-      if (nameA > nameB) {
-        return 1
-      }
+  const sortedDevices = sortByKey(clonedDevices, sortKey.value, 'desc');
 
-      return 0
-    } else if (typeof currValue === 'number' && typeof nextValue === 'number') {
-      return (currValue as number) - (nextValue as number)
-    }
-  })
-
-  return clonedDevices
+  return sortedDevices
 })
 
 const handleSortChange = (sortOption: keyof Device) => {
