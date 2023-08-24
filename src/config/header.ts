@@ -21,7 +21,7 @@ export const header: HeaderConfig = {
     }
   ],
   userMenu: {
-    image: '/src/assets/img.png',
+    image: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     fullName: 'Admirra John'
   }
 }
